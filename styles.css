@@ -1,0 +1,111 @@
+
+ * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .container {
+    padding: 30px 20px;
+    background-image: url(images/bg.jpg);
+    min-height: 100vh;
+  }
+  
+  .todo {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    max-width: 540px;
+    /* background: linear-gradient(to right, #003300, #000000); */
+    background: url(./images/greenleaves.jpg);
+  }
+  
+  .todo h1 {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: rgb(212, 128, 38);
+  }
+  
+  .todo h1 img {
+    margin-left: 30px;
+    width: 50px;
+  }
+  
+  .input-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(176, 178, 177);
+    border-radius: 30px;
+    padding-left: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .input-field input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 19px;
+    font-weight: 14px;
+    font-size: 20px;
+    color: black;
+  }
+  
+  .input-field button {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 16px 50px;
+    color: rgb(196, 196, 48);
+    background: rgb(3, 34, 10);
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  ul li {
+    list-style: none;
+    cursor: pointer;
+    font-size: 17px;
+    user-select: none;
+    padding: 11px 16px 10px 18px;
+    position: relative;
+    color: blanchedalmond;
+  }
+  
+  ul li::before {
+    content: '';
+    position: absolute;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  ul li .delete-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 75px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  ul li:hover .delete-button {
+    display: block;
+    color:rgb(205, 145, 34);
+  }
+  
+  ul li.marked{
+    text-decoration: line-through;
+    color:grey;
+}
+
+ul li.marked::before{
+    background-image: url(images/check.png);
+}
